@@ -42,10 +42,10 @@ def get_sheet():
  spreadsheet = client.open_by_key(SPREADSHEET_ID)
 
  try:
- worksheet = spreadsheet.worksheet(SHEET_NAME)
+     worksheet = spreadsheet.worksheet(SHEET_NAME)
  except gspread.WorksheetNotFound:
- worksheet = spreadsheet.add_worksheet(title=SHEET_NAME, rows=1000, cols=10)
- log.info("Created new worksheet: %s", SHEET_NAME)
+     worksheet = spreadsheet.add_worksheet(title=SHEET_NAME, rows=1000, cols=10)
+     log.info("Created new worksheet: %s", SHEET_NAME)
 
  return worksheet
 
